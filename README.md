@@ -34,6 +34,8 @@ git clone https://www.github.com/njtierney/rbp-exercises
   and `dodgy-logic.R` is laid out beautifully and is wrong
 - `07-needs-review/` — code that runs, and that `{air}` and a linter will
   happily tidy without making it any easier to understand
+- `08-curly-code/` — a longer one. Runs, produces a report, and trips 23
+  different linter rules before you get to the parts no tool can see
 
 ## How it's used
 
@@ -48,10 +50,11 @@ material. Run `{air}` over `messy-analysis.R`, and a linter over
 review exercise. Learners run the automated checks first, then discover that
 the code is still hard to follow, and review it properly.
 
-`08-real-code-from-the-wild/` is the optional second round.
+`08-curly-code/penguin-report.R` is the longer second round, for anyone who
+finishes early or wants to practise the whole process end to end.
 
-Do not format `06-bad-style/`, `07-needs-review/` or
-`08-real-code-from-the-wild/` when tidying this repo. Being awful is their job.
+Do not format `06-bad-style/`, `07-needs-review/` or `08-curly-code/` when
+tidying this repo. Being awful is their job.
 
 **Chapter 6, putting it all together.** Take one of folders `01` to `04` and
 reorganise it towards `05-tidy/`.
