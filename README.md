@@ -34,8 +34,10 @@ git clone https://www.github.com/njtierney/rbp-exercises
   and `dodgy-logic.R` is laid out beautifully and is wrong
 - `07-needs-review/` — code that runs, and that `{air}` and a linter will
   happily tidy without making it any easier to understand
-- `08-curly-code/` — a longer one. Runs, produces a report, and trips 23
+- `08-curly-code/` — a longer one. Runs, produces a report, and trips 13
   different linter rules before you get to the parts no tool can see
+- `10-hard-to-read/` — ninety lines that run, are formatted, and tell you
+  nothing. The running example in chapter 3
 
 ## How it's used
 
@@ -46,15 +48,22 @@ worked examples of what goes wrong.
 material. Run `{air}` over `messy-analysis.R`, and a linter over
 `dodgy-logic.R`.
 
-**Chapter 3, writing readable code.** `07-needs-review/analysis.R` is the
-review exercise. Learners run the automated checks first, then discover that
-the code is still hard to follow, and review it properly.
+**Chapter 3, writing readable code.** `10-hard-to-read/analysis.R` is the
+running example the chapter works on from start to finish - renaming, then
+chunking. It is printed in the chapter too, so learners can use either.
 
-`08-curly-code/penguin-report.R` is the longer second round, for anyone who
-finishes early or wants to practise the whole process end to end.
+`07-needs-review/analysis.R` is the review exercise they do on their own.
+Learners run the automated checks first, then discover the code is still hard
+to follow, and review it properly.
 
-Do not format `06-bad-style/`, `07-needs-review/` or `08-curly-code/` when
-tidying this repo. Being awful is their job.
+`08-curly-code/penguin-report.R` does two jobs. It is the "count the arrows"
+exercise - eight objects in it are computed and never used, and
+`lintr::object_usage_linter()` finds none of them, because they are all at the
+top level of a script rather than inside a function. It is also the longer
+second round for anyone who finishes early.
+
+Do not format `06-bad-style/`, `07-needs-review/`, `08-curly-code/` or
+`10-hard-to-read/` when tidying this repo. Being awful is their job.
 
 **Chapter 6, putting it all together.** Take one of folders `01` to `04` and
 reorganise it towards `05-tidy/`.
